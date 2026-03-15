@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Harshit Pal Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="intro-active">
+
+    <div class="intro-overlay">
+        <div class="intro-content">
+            <div class="moon-logo">HP</div>
+            <h1 class="intro-title">Welcome to My Digital Space</h1>
+            <button id="enterBtn" class="fanatic-btn">Enter Portfolio</button>
+        </div>
+    </div>
+
+    <div id="mainPage" class="main-portfolio-wrapper hidden">
+        
+        <div class="header-bg-overlay"></div>
+
+        <main class="container">
+            <header>
+                <div class="profile-header-container">
+                    <img src="WhatsApp Image 2026-03-15 at 5.10.48 PM.jpeg" alt="Harshit Pal" class="profile-img-circle">
+                </div>
+                <div class="titles-container">
+                    <h1 class="hero-title">Harshit Pal</h1>
+                    <p class="hero-subtitle">Web Developer | Student</p>
+                </div>
+            </header>
+
+            <nav class="glass-nav">
+                <a href="#about">About</a>
+                <a href="#skills">Skills</a>
+                <a href="#projects">Projects</a>
+                <a href="#contact">Contact</a>
+            </nav>
+
+            <div class="sections-wrapper">
+                <section id="about">
+                    <h2>About Me</h2>
+                    <p>Hello! I am Harshit Pal. I am learning Web Development and building my skills in HTML, CSS, Java and JavaScript. I am passionate about creating clean, functional, and user-friendly web interfaces. My goal is not just to find a job but to create opportunities and build 
+something that can provide jobs to others in the future. I believe in continuous learning, innovation and using technology to solve real-world problems. I want to grow as a developer and entrepreneur who can contribute to society by creating impactful projects and startups.</p>   
+
+         </section>
+
+                <section id="skills">
+                    <h2>Skills</h2>
+                    <ul class="skills-list">
+                        <li><span>HTML</span></li>
+                        <li><span>CSS</span></li>
+                        <li><span>JAVA</span></li>
+                        <li><span>JAVA SCRIPT</span></li>
+                        <li><span>C Programming</span></li>
+                        <!-- <li><span>Responsive Design</span></li>
+                        <li><span>Bootstrap</span></li> -->
+                    </ul>
+                </section>
+
+                <section id="projects">
+                    <h2>Projects</h2>
+                    <div class="project-card">
+                        <h3>Portfolio Website</h3>
+                        <p>A personal website to showcase my skills and projects, built using HTML, CSS (including this fanatic design!), and JavaScript.</p>
+                    </div>
+                    <div class="project-card">
+                        <h3>Calculator</h3>
+                        <p>A simple yet elegant calculator using fundamental web technologies.</p>
+                    </div>
+                </section>
+
+                <section id="contact">
+                    <h2>Contact</h2>
+                    <p>Let's collaborate! Reach out to me via email or follow my professional journey:</p>
+                    <div class="links-grid">
+                        <a target="blank" href="https://www.instagram.com/harshit.x2100/" class="contact-btn Instagram-btn">Instagram profile</a>
+                        <a target="blank" href="https://github.com/palh5515-oss" class="contact-btn github-btn">Github Profile</a>
+                        <a target="blank" href="https://www.linkedin.com/in/harshit-pal-1168b130b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" class="contact-btn linkedin-btn">LinkedIn Profile</a>
+                        <a href="#" class="contact-btn resume-btn">Download Resume</a>
+                    </div>
+                </section>
+            </div>
+        </main>
+
+        <footer>
+            <div class="container">
+                <p>© 2026 Harshit Pal. All rights reserved.</p>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        document.getElementById('enterBtn').addEventListener('click', function() {
+            // Intro overlay ko fade out aur hide karo
+            document.querySelector('.intro-overlay').classList.add('fade-out');
+            setTimeout(function() {
+                document.querySelector('.intro-overlay').classList.add('hidden');
+                document.body.classList.remove('intro-active');
+                // Main portfolio ko reveal karo
+                document.getElementById('mainPage').classList.remove('hidden');
+                document.getElementById('mainPage').classList.add('reveal');
+            }, 800); // Animation duration se match karein
+        });
+    </script>
+</body>
+</html>
